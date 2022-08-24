@@ -170,8 +170,5 @@ class Body():
 
 
 
-            
-           
-
 
 Body.choice()
