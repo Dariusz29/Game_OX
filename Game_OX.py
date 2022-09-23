@@ -57,26 +57,26 @@ class Body():
         z = list(pos_board.values())
         
 
-        if z[1] == x and z[2] == x and z[3]:
-            print('You win this game!')      
-        elif z[4] == x and z[5] == x and z[6]:
+        if z[0] == x and z[1] == x and z[2] == x:
             print('You win this game!')
-        elif z[7] == x and z[8] == x and z[9]:
+        elif z[3] == x and z[4] == x and z[5] == x:
             print('You win this game!')
-        elif z[1] == x and z[4] == x and z[7]:
+        elif z[6] == x and z[7] == x and z[8] == x:
             print('You win this game!')
-        elif z[2] == x and z[5] == x and z[8]:
+        elif z[0] == x and z[3] == x and z[6] == x:
             print('You win this game!')
-        elif z[3] == x and z[6] == x and z[9]:
+        elif z[1] == x and z[4] == x and z[7] == x:
             print('You win this game!')
-        elif z[1] == x and z[5] == x and z[9]:
+        elif z[2] == x and z[5] == x and z[8] == x:
             print('You win this game!')
-        elif z[3] == x and z[5] == x and z[7]:
+        elif z[0] == x and z[4] == x and z[8] == x:
+            print('You win this game!')
+        elif z[2] == x and z[4] == x and z[6] == x:
             print('You win this game!')
         
 
     def choice():
-        a = True
+        
         _pos_ = [1,2,3,4,5,6,7,8,9]
 
         empty = bool(a for a in pos_board.values() if a != [])
@@ -96,6 +96,7 @@ class Body():
         for i in range(0,9):
             
             Body.board()
+            Body.rules()
            
             if i % 2:
                 ban = "X"
@@ -162,7 +163,7 @@ class Body():
             print('\n')
         
         Body.board()
-        Body.rules()
+        
        
         print('End Game!!!')      
 
@@ -170,5 +171,7 @@ class Body():
 
 
 
+            
+           
 
 Body.choice()
